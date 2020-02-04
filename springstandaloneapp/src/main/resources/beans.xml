@@ -15,8 +15,8 @@
     <property name="username" value="hr" />
     <property name="password" value="hr" />
 </bean> -->
-
-<bean id="dataSource" class="test.standaloneapp.dataconnection.BasicDataSource">
+<!-- by default bean scope is singletone -->
+<bean id="dataSource" class="test.standaloneapp.dataconnection.BasicDataSource" scope="prototype">
     <property name="dataSourceName" value="oracle.jdbc.driver.OracleDriver" />
     <property name="url" value="jdbc:oracle:thin:@localhost:1521:XE" />
     <property name="username" value="hr" />
